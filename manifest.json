@@ -15,14 +15,16 @@
   "permissions" : [
     "declarativeContent",
     "activeTab"
+    
   ],
   "content_scripts":
   [
       {
           "matches": ["*://*.youtube.com/*"],
-          "js": ["content.js"],
+          "js": ["content.js", "setup.js"],
           "run_at": "document_end"
       }
+     
   ],
   "icons" : {
     "48" : "images/icon-48.png",
