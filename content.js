@@ -5,30 +5,32 @@ if (related.children.length == 3){
     related.removeChild(related.children[0]);
     related.removeChild(related.children[0]);
     related.removeChild(related.children[0]);
-
+    related.setAttribute("style"," overflow: auto; white-space: nowrap;")
 }
 
 showHide();
 
 function showHide() {
-  
-    for (var j = 0; j < contents.childNodes.length; j++) {
+    var done = false;
+    while (!done){
+         removeComments();
+            var k = 0;
+            for (var i = 0; i< contents.childNodes.length; i++){
+                if (!((comment[i].children[0].children[1].children[1].children[0].children[1].children[0] == null) || (comment[i].children[0].children[1].children[1].children[0].children[1].children[0]
+                    != null && comment[i].children[0].children[1].children[1].children[0].children[1].children[0].href == undefined))) {
+                        k++;
+                    }
+                   
+                console.log(i + comment[i].children[0].children[1].children[1].children[0].children[1].children[0])
+                console.log('i = ', i)
 
-        if ((comment[j].children[0].children[1].children[1].children[0].children[1].children[0] == null) || (comment[j].children[0].children[1].children[1].children[0].children[1].children[0]
-            != null && comment[j].children[0].children[1].children[1].children[0].children[1].children[0].href == undefined)) {
-            comment[j].children[0].children[1].children[1].children[0].children[1].children[0] == null
-            contents.removeChild(contents.childNodes[j])
-            //console.log(comment[j].children[0].children[1].children[1].children[0].innerText);
-            
-        }
-        else {
-            console.log(j + comment[j].children[0].children[1].children[1].children[0].children[1].children[0])
-            //  i = comment.length
-            // console.log('i = ', i)
-        }
+            }
+            if (k==contents.childNodes.length){
+                done = true
+            }
 
-
-    }
+    } 
+   
 
 
     var items = document.getElementsByClassName('style-scope ytd-item-section-renderer')
@@ -56,6 +58,20 @@ function sortComments (a,b) {
     return parseInt(a.children[0].children[0].children[1].children[1].children[0].children[1].children[0].href.split("&t=")[1]) - parseInt(b.children[0].children[0].children[1].children[1].children[0].children[1].children[0].href.split("&t=")[1]);
 }
 
+function removeComments(){
+    for (var j = 0; j < contents.childNodes.length; j++) {
+
+        if ((comment[j].children[0].children[1].children[1].children[0].children[1].children[0] == null) || (comment[j].children[0].children[1].children[1].children[0].children[1].children[0]
+            != null && comment[j].children[0].children[1].children[1].children[0].children[1].children[0].href == undefined)) {
+            comment[j].children[0].children[1].children[1].children[0].children[1].children[0] == null
+            contents.removeChild(contents.childNodes[j])
+            
+        }
+       
+
+
+    }
+}  
 
 
 
