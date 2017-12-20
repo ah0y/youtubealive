@@ -21,7 +21,7 @@
   [
       {
           "matches": ["*://*.youtube.com/*"],
-          "js": ["content.js", "setup.js"],
+          "js": ["content.js"],
           "run_at": "document_end"
       }
      
