@@ -1,8 +1,9 @@
-## What is the NoComment Chrome Extension?
+## What is the YouTube Alive Chrome Extension?
 
-NoComment is a very basic Chrome Extension that:
+YouTube Alive is a very basic Chrome Extension that:
 
-* Hides the comments section on YouTube.com pages by default on page load
-* Displays an icon in the addressbar to allow users to click to toggle the comment visibility
+* Loads all youtube comments where the related videos would be (on the right hand side of the video)
+* Displays an icon in the addressbar that allows users to filter out comments without duration markers
+* Sorts all comments with duration markers in ascending order
 
-This was used for the blog post [Create a Chrome Extension to hide YouTube Comments](http://39digits.com/create-a-chrome-extension-to-hide-youtube-comments/)
+
