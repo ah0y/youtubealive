@@ -1,8 +1,8 @@
 {
-  "name": "NoComment",
+  "name": "YouTube Alive",
   "version": "1.0.0",
   "manifest_version": 2,
-  "description": "Toggle comment visibility on YouTube.com",
+  "description": "Make YouTube comments come alive",
   "background": {
     "scripts": ["background.js"],
     "persistent": false
